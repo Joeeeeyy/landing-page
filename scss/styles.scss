@@ -11,8 +11,8 @@
 }
 
 html {
-  max-width: 150vw;
   width: 100%;
+  box-sizing: inherit;
 }
 
 body {
@@ -21,52 +21,198 @@ body {
   width: 100%;
 }
 
-header {
+nav {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: $primary;
-  justify-content: space-around;
-  margin: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .logo {
   @include logo($secondary);
   display: inline-block;
-  justify-content: flex-start;
-}
-
-.navbar {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  flex-flow: row wrap;
-  padding-top: 10px;
-  display: flex;
-  height: 18vh;
-  
-}
-
-li {
-  flex: auto;
-  flex-grow: 1;
-}
-
-a {
-  @include text($secondary);
-  text-decoration: none;
-  display: block;
-  padding: 10px 15px;
-}
-
-nav {
-  padding-left: 30px;
-  padding-right: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
+  list-style-type: none;
+}
+
+.nav-item a {
+  @include text($secondary);
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+}
+
+.nav-item:hover {
+  color: $secondary;
+  background-color: $secondary;
+}
+
+header {
+  background: $primary;
+  padding: 0 250px;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  padding: 50px 0;
+}
+
+.hero-text {
+  flex: 50%;
+  flex-wrap: wrap;
+  width: 400px;
+  flex-direction: column;
+}
+
+.hero-title {
+  @include title($secondary);
+  margin-bottom: 30px;
+}
+
+.subtext {
+  @include text($secondary);
+  line-height: 1.5;
+}
+
+.hero-button {
+  background-color: $button;
+  color: $secondary;
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
   justify-content: flex-end;
+}
+.hero-left {
+  max-width: 715px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hero-right {
+  max-width: 715px;
+  width: 100%;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  flex: 100%;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  flex: 100%;
+}
+
+.info-title {
+  @include header($primary);
+  padding: 20px;
+  text-align: center;
+}
+
+.info-col p {
+  @include text($primary);
+  text-align: center;
+  width: 175px;
+}
+
+.info-col {
+  justify-content: center;
+  align-items: center;
+  flex: 25%;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+.quote-row {
+  background-color: $quote-bg;
+  width: 100%;
+  padding: 100px 250px;
+}
+
+.quote-col {
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  @include quote($primary);
+}
+
+.author { 
+  @include quote($primary);
+  padding: 20px;
+}
+
+.cta-row {
+  background-color: $button;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.call-to-action {
+  width: 100%;
+  background-color: $secondary;
+  padding:  50px 150px;
+}
+
+.cta-col {
+  justify-content: space-between;
+  color: $secondary;
+  align-items: center;
+}
+
+.cta {
+  border: 1px solid $secondary;
+  background-color: $button;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text {
+  width: 50%;
+  padding: 0 10px;
+}
+
+.button {
+  width: 25%;
+}
+
+main { 
+  width: 100%;
+}
+
+h3 {
+  @include header($secondary);
+  margin-bottom: 10px;
+}
+
+footer {
+  width: 100%;
+  background-color: $primary;
+  color: white;
+  padding: 50px;
+  text-align: center;
 }
