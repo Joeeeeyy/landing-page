@@ -1,7 +1,7 @@
 @import "./colors";
 
-@mixin title($econdary) {
-  color: $econdary;
+@mixin title($secondary) {
+  color: $secondary;
   font-size: 3rem;
   font-weight: 700;
 }
@@ -18,14 +18,14 @@
   font-weight: 300;
 }
 
-@mixin logo($econdary) {
-  color: $econdary;
+@mixin logo($secondary) {
+  color: $secondary;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-@mixin text($econdary) {
-  color: $econdary;
+@mixin text($secondary) {
+  color: $secondary;
   font-size: 1.125rem;
   font-weight: 300;
 }

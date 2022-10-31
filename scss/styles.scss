@@ -1,9 +1,72 @@
-@import "/scss/colors";
-@import "/scss/mixins";
-@import "/scss/reset";
+@import "../scss/colors";
+@import "../scss/mixins";
+@import "../scss/reset";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
 
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
 html {
-  max-width: 120rem;
+  max-width: 150vw;
   width: 100%;
+}
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  height: 150vh;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  background-color: $primary;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.logo {
+  @include logo($secondary);
+  display: inline-block;
+  justify-content: flex-start;
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-flow: row wrap;
+  padding-top: 10px;
+  display: flex;
+  height: 18vh;
+  
+}
+
+li {
+  flex: auto;
+  flex-grow: 1;
+}
+
+a {
+  @include text($secondary);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+nav {
+  padding-left: 30px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
 }
